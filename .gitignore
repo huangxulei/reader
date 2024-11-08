@@ -1,0 +1,68 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Web related
+lib/generated_plugin_registrant.dart
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# 2022-05-30 不管了，反正是私有仓库，后续有需要开源再說
+
+# 存放例如需要第三方服务的token，就不要上传了,类似:
+#   class GlobalConstants {
+#       static String pexels_authorization="xxx";
+#   }
+# lib/common/personal
+
+## pdf viewer测试的文档，没有版权，不要传播
+# assets/pdfs
+# 同上
+# assets/txts
+
+# md的技术博文文档改动很大,暂时不上传了,之前上传的assets/md就先不管了
+assets/mds
+assets/pdfs
+assets/txts
+assets/jsons
+
+# demo 不上传了，之前的都删除了
+lib/_demos
