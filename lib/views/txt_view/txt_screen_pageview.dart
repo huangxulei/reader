@@ -199,7 +199,7 @@ class _TxtScreenPageViewState extends State<TxtScreenPageView> {
     var pageCharLimit = (deviceDimension / perCharSize).round();
 
     /// 计算总共大概会有多少页 （总字数/每页字数）向上取整。
-    var pageCount = (textLength / pageCharLimit).ceil();
+    var pageCount = (textLength / pageCharLimit).ceil(); //每页显示字数
 
     // print("""长度、面积单位sp:
     //     原始设备高度*宽度 $deviceHeight * $deviceWidth
@@ -228,6 +228,7 @@ class _TxtScreenPageViewState extends State<TxtScreenPageView> {
     var endStrIndex = pageCharLimit;
     while (index < pageCount) {
       /// Update the last index to the Document Text length
+      /// 最后一页
       if (index == pageCount - 1) endStrIndex = textLength;
 
       /// Add String on List<String>
@@ -240,6 +241,10 @@ class _TxtScreenPageViewState extends State<TxtScreenPageView> {
       }
       index++;
     }
+
+    pageText.forEach((txt) {
+      print(txt.substring(0, 20));
+    });
 
     // 绑定pageview的控制器，以便能初始化到指定页码
     PageController pageController = PageController(
