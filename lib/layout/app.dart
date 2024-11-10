@@ -30,7 +30,6 @@ class FreaderApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, widget) {
         return MaterialApp(
-          scrollBehavior: MyCustomScrollBehavior(),
           title: 'freader',
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
@@ -50,14 +49,4 @@ class FreaderApp extends StatelessWidget {
       },
     );
   }
-}
-
-class MyCustomScrollBehavior extends MaterialScrollBehavior {
-  // Override behavior methods and getters like dragDevices
-  @override
-  Set<PointerDeviceKind> get dragDevices => {
-        PointerDeviceKind.touch,
-        PointerDeviceKind.mouse,
-        // etc.
-      };
 }
